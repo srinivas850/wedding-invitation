@@ -10,12 +10,9 @@ const CONFIG = {
     adminPin: "1234",                // RSVP Admin Console passcode
     
     // --- WEDDING BACKGROUND MUSIC CONFIGURATION ---
-    // You can easily use your favorite song from Venkatesh movies!
-    // 1. Download the MP3 of your choice (e.g. Kalisundam Raa or Malliswari wedding tracks)
-    // 2. Put it in your "assets/" folder, and rename it to "wedding-music.mp3"
-    // 3. Update the audioUrl below to: "assets/wedding-music.mp3" to play it offline/instantly!
-    audioUrl: "https://archive.org/download/south-indian-wedding-nadaswaram-traditional-instrumental/south-indian-wedding-nadaswaram-traditional-instrumental.mp3",
-    audioFallbackUrl: "https://archive.org/download/traditional-telugu-wedding-mangala-vadyam/traditional-telugu-wedding-mangala-vadyam.mp3"
+    // Using the classic Kalisunte Kaladu song saved locally in assets
+    audioUrl: "assets/wedding-music.mp3",
+    audioFallbackUrl: "https://archive.org/download/BMKMCUKSConcert/BMK-MC-UKS%20concert.mp3"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -134,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             state.audioElement = new Audio();
             state.audioElement.src = CONFIG.audioUrl;
             state.audioElement.loop = true;
-            state.audioElement.volume = 0.45; // Soft pleasant background volume
+            state.audioElement.volume = 0.22; // Comfortable, soft, not too loud background volume
             
             // Audio error fallbacks
             state.audioElement.addEventListener("error", (e) => {
